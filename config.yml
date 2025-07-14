@@ -1,0 +1,19 @@
+scoring:
+  max_events_to_count: 3
+  max_points: 50
+
+events:
+  - name: "Nursling April 2025 ScoreN45"
+    closing_date: "2025-04-30"
+  - name: "Otterbourne May 2025 ScoreN45"
+    closing_date: "2025-05-31"
+  - name: "Chandlers Ford Boyatt Wood June 2025 ScoreN45"
+    closing_date: "2025-06-30"
+
+# Optional section for publishing results to a Drupal site
+drupal_publisher:
+  url: "https://www.socweb.org/node/2675"
+  username: "SOCbot"
+  password: "H\"2.^x5>[?=_"
+  # Set to false if you only want to generate the HTML without uploading.
+  enabled: true

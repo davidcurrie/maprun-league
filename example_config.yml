@@ -1,0 +1,32 @@
+# List of events in the league
+events:
+  - # Name of the event as it appears in MapRun
+    name: "My April Event ScoreN45"
+    # The last date on which a result can count towards the league
+    closing_date: "2025-04-30"
+  - # Name of the event as it appears in MapRun
+    name: "My May Event ScoreN45"
+    # The last date on which a result can count towards the league
+    closing_date: "2025-05-31"
+  - # Name of the event as it appears in MapRun
+    name: "My June Event ScoreN45"
+    # The last date on which a result can count towards the league
+    closing_date: "2025-06-30"
+
+# Configuration for scoring the league
+scoring:
+  # Maximum number of events to count towards the final score
+  max_events_to_count: 2
+  # Points awarded to the winner of each event
+  max_points: 50
+
+# Optional section for publishing results to a Drupal website
+drupal_publisher:
+  # URL of the Drupal node where results will be published
+  url: "https://example.org/node/1234"
+  # Username for authentication
+  username: "MyUsername"
+  # Password for authentication
+  password: "MyPassword"
+  # Set to false if you only want to generate the HTML without uploading
+  enabled: true
