@@ -1,21 +1,25 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"log"
 	"os"
 
+	"github.com/alecthomas/kong"
 	"github.com/davidcurrie/maprun-league/internal/config"
 	"github.com/davidcurrie/maprun-league/internal/league"
 	"github.com/davidcurrie/maprun-league/internal/publisher"
 )
 
-func main() {
-	configPath := flag.String("config", "config.yaml", "path to the configuration file")
-	flag.Parse()
+type CLI struct {
+	Config string `help:"Path to the configuration file" type:"path" default:"config.yaml"`
+}
 
-	cfg, err := config.Load(*configPath)
+func main() {
+	var cli CLI
+	kong.Parse(&cli)
+
+	cfg, err := config.Load(cli.Config)
 	if err != nil {
 		log.Fatalf("Error loading config: %v", err)
 	}
